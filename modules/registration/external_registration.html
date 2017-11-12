@@ -119,7 +119,7 @@
             dbv.S1=$('#Email__ID').val();
             dbv.S2=$('#Email__ID').val();
 
-            var req={cmd:"s1_s2_exist",db_pid:external_registration_pid,s1:dbv.S1,s2:dbv.S2};
+            var req={cmd:"s1_s2_exist",db_pid:external_registration_pid,s1:dbv.S1,s2:dbv.S2};							//regidtration: 20008858
             $VmAPI.request({data:req,callback:function(res){
                 if(res.ret==='0'){
                     var req={cmd:"add_record_anonymous",db_pid:external_registration_pid,data:record,dbv:dbv};
@@ -142,14 +142,15 @@
             var registration_id=res.uid;
             var row_data={Registration_ID:registration_id};
             var dbv={S1:registration_id};
-            var req={cmd:"add_record_anonymous",db_pid:screening_participant_pid,data:row_data,dbv:dbv};
+            var req={cmd:"add_record_anonymous",db_pid:screening_participant_pid,data:row_data,dbv:dbv};			//screening_participant: 20009058
             $VmAPI.request({data:req,callback:function(res2){
                 create_screening_participant_setup_record(registration_id,res2);
             }})
         }
         //-------------------------------------
         var create_screening_participant_setup_record=function(registration_id,res){
-            var username=registration_id+"-"+screening_participant_setup_pid;
+            //var username=registration_id+"-"+screening_participant_setup_pid;										//screening_participant_setup_pid: 20009059;
+			var username=res.uid+"-"+screening_participant_setup_pid;												//screening_participant_setup_pid: 20009059;
             var password=$vm.vm_password(8,false);
             var List="20009060,20009061,20009073,20009079,20009298,20009063,20009064,20009190,20009074,20009075,20009076,20009078,20009080,";
             List+="20009081,20009083,20009084,20009085,20009086,20009087,20009088,20008713";
