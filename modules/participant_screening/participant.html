@@ -4,7 +4,7 @@
 <script>
     function F__ID(){
         //-------------------------------------
-        _fields="_Form,Registration_ID,_Data_Entry,_Setup,_Quest,_Report_1";
+        _fields="_Form,Registration_ID,Screening_Participant_ID|UID,_Data_Entry,_Setup,_Quest,_Report_1";
         _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete";
         //-------------------------------------
         VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
@@ -14,8 +14,11 @@
         //-------------------------------------
         _cell_render=function(records,I,field,td,set_value,source){
             switch(field){
-                case 'registration_id':
-                    records[I].vm_readonlycustom[field]=true;
+                case 'Registration_ID':
+                    records[I].vm_readonly[field]=true;
+                    break;
+				case 'UID':
+                    records[I].vm_readonly[field]=true;
                     break;
                 case '_Data_Entry':
                     records[I].vm_custom[field]=true;
