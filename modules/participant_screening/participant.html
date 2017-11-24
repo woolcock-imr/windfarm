@@ -4,7 +4,7 @@
 <script>
     function F__ID(){
         //-------------------------------------
-        _fields="_Form,Registration_ID,Screening_Participant_ID|UID,_Data_Entry,_Setup,_Quest,_Report_1";
+        _fields="_Form,Screening_Participant_ID|UID,_Data_Entry,_Setup,_Quest,_Report_1";
         _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete";
         //-------------------------------------
         VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
@@ -27,7 +27,7 @@
                     td.find('u').on('click',function(){
                         $vm.load_module_by_name(_app_id+'data_entry_by_staff',$vm.root_layout_content_slot,{
                             rid:_records[I].ID,participant_uid:_records[I].UID,
-                            participant_name:_records[I].Registration_ID,
+                            participant_name:_records[I].UID,
                         });
                     });
                     break;
