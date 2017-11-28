@@ -55,6 +55,7 @@ $(document).ready(function(){
         var re3=new RegExp('__VER__', 'g'); 	                         text=text.replace(re3,$vm.version);
         var re4=new RegExp('/master/', 'g');	                         text=text.replace(re4,'/');
         var re5=new RegExp('/blob/', 'g');		                         text=text.replace(re5,'/blob/master/');
+		text=text.replace(/woolcock-imr\/woolcock\//g,'');
 		return text;
 	}
 	//--------------------------------------------------------
