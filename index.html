@@ -28,8 +28,8 @@ $(document).ready(function(){
         $.get(url,function(new_ver){ $vm.version=new_ver.trim(); load_vmapi();},'text')
 	}
 	//--------------------------------------------------------
-    var load_vmapi   =function(){ load_js($vm.url('__BASE__/vmiis/VmAPI/distribution/vmapi.min.js'),load_vm);	}
-    var load_vm      =function(){ load_js($vm.url('__BASE__/vmiis/VmFramework/distribution/vmframework.min.js'),init);}
+    var load_vmapi   =function(){ load_js($vm.url('https://vmiis.github.io/api/distribution/vmapi.min.js'),load_vm);	}
+    var load_vm      =function(){ load_js($vm.url('https://vmiis.github.io/framework/distribution/vmframework.min.js'),init);}
     var init         =function(){ $vm.init({callback:function(){$vm.load_first_module({url:$vm.hosting_path+'/'+$vm.repository+'/modules/frame/layout.html'}); last();  }});	}
 	//--------------------------------------------------------
 	var load_js=function(url,next){
