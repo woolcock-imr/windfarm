@@ -56,6 +56,7 @@ $(document).ready(function(){
         var re4=new RegExp('/master/', 'g');	                         text=text.replace(re4,'/');
         var re5=new RegExp('/blob/', 'g');		                         text=text.replace(re5,'/blob/master/');
 		text=text.replace(/woolcock-imr\/windfarm\//g,'');
+		text=text.replace(/windfarm.rt.org.au\/vmiis\/Common-Code/g,'vmiis.github.io\/component');
 		return text;
 	}
 	//--------------------------------------------------------
