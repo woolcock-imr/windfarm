@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 <script>
-$vm={}; $VmAPI={}; $vm.ver=[1.00,1.00];
+$vm={}; $VmAPI={}; $vm.ver=[1.01,1.00];
 $(document).ready(function(){
     //--------------------------------------------------------
     $vm.repository      ="";
@@ -14,7 +14,7 @@ $(document).ready(function(){
     if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
         $vm.hosting_path    =window.location.protocol+'//'+window.location.host;
         $vm.common          =window.location.protocol+'//'+window.location.host;
-        $vm.debug		    =true;
+        $vm.debug		    =false;
         $vm.repository      ="woolcock-imr/windfarm";
     }
     //--------------------------------------------------------
