@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 <script>
-$vm={}; $VmAPI={};
+$vm={}; $VmAPI={}; $vm.ver=[1.00,1.00];
 $(document).ready(function(){
     //--------------------------------------------------------
     $vm.repository      ="";
@@ -19,13 +19,12 @@ $(document).ready(function(){
     }
     //--------------------------------------------------------
 	var start=function(){
-		var url=$vm.url('__BASE__/'+$vm.repository+'/version.html?_=')+new Date().getTime();
-		if($vm.debug_message===true) console.log('load module from '+url);
-        $.get(url,function(new_ver){ $vm.version=new_ver.trim(); load_vmapi();},'text')
+		//var url=$vm.url('__BASE__/'+$vm.repository+'/version.html?_=')+new Date().getTime();
+		//if($vm.debug_message===true) console.log('load module from '+url);
+        //$.get(url,function(new_ver){ $vm.version=new_ver.trim(); load_vmapi();},'text')
+        $vm.version=$vm.ver[0]; load_vmapi();
 	}
 	//--------------------------------------------------------
-    //var load_vmapi   =function(){ load_js($vm.url('https://vmiis.github.io/api/distribution/vmapi.min.js'),load_vm);	}
-    //var load_vm      =function(){ load_js($vm.url('https://vmiis.github.io/framework/distribution/vmframework.min.js'),init);}
     var load_vmapi   =function(){ load_js($vm.url('https://api.vmiis.com/distribution/vmapi.min.js'),load_vm);	}
     var load_vm      =function(){ load_js($vm.url('https://framework.vmiis.com/distribution/vmframework.min.js'),init);}
     var init         =function(){ $vm.init({callback:function(){$vm.load_first_module({url:$vm.hosting_path+'/'+$vm.repository+'/modules/frame/layout.html'}); last();  }});	}
