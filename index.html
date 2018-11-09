@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 <script>
-$vm={}; $VmAPI={}; $vm.ver=[1.05,1.00];
+$vm={}; $VmAPI={}; $vm.ver=[1.06,1.00];
 $(document).ready(function(){
     //--------------------------------------------------------
     $vm.repository      ="";
@@ -63,6 +63,8 @@ $(document).ready(function(){
         else{
             text=text.replace(/__BASE__\/woolcock-imr\/woolcock_images/g,$vm.hosting_path+'/images');
             text=text.replace(/woolcock-imr\/windfarm\//g,'');
+            text=text.replace(/__BASE__\/vmiis\/Common-Code\//g,'https://component.vmiis.com');
+            text=text.replace(/__COMPONENT__\//g,'https://component.vmiis.com/');
         }
 		return text;
 	}
