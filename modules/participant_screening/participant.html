@@ -1,5 +1,5 @@
 <section>
-      VmInclude:__COMPONENT__/grid/grid.html
+      VmInclude:__BASE__/vmiis/Common-Code/grid/grid.html
 </section>
 <script>
     function F__ID(){
@@ -7,8 +7,8 @@
         _fields="_Form,Screening_Participant_ID|UID,_Data_Entry,_Setup,_Quest,_Report_1";
         _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete";
         //-------------------------------------
-        VmInclude:__COMPONENT__/grid/grid.js
-        VmInclude:__COMPONENT__/style/ease-in-out.js
+        VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
+        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
         //-------------------------------------
         $('#D__ID').on('load',function(){  _set_req(); _request_data();  })
         //-------------------------------------
@@ -124,5 +124,5 @@
     }
 </script>
 <style>
-    VmInclude:__COMPONENT__/grid/grid.css
+    VmInclude:__BASE__/vmiis/Common-Code/grid/grid.css
 </style>

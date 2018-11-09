@@ -1,14 +1,14 @@
 <section>
-      VmInclude:__COMPONENT__/toolbar/week.html
-      VmInclude:__COMPONENT__/calendar/week.html
+      VmInclude:__BASE__/vmiis/Common-Code/toolbar/week.html
+      VmInclude:__BASE__/vmiis/Common-Code/calendar/week.html
 </section>
 <script>
     function F__ID(){
         //--------------------------------------------------------
         var _op,_module=$vm.module_list[$vm.vm['__ID'].name];
-        VmInclude:__COMPONENT__/toolbar/week_v2.js
-        VmInclude:__COMPONENT__/calendar/week_v2.js
-        VmInclude:__COMPONENT__/style/ease-in-out.js
+        VmInclude:__BASE__/vmiis/Common-Code/toolbar/week_v2.js
+        VmInclude:__BASE__/vmiis/Common-Code/calendar/week_v2.js
+        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
         //--------------------------------------------------------
         var record_name=_module.var.booking_record_module;
         var daily_name=_module.var.booking_daily_module;

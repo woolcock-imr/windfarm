@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
 <script>
-$vm={}; $VmAPI={}; $vm.ver=[1.09,1.00];
+$vm={}; $VmAPI={};
 $(document).ready(function(){
     //--------------------------------------------------------
-    $vm.repository      ="";
-    $vm.server		    ="production";
-    $VmAPI.api_base	    ="https://rt.woolcock.org.au/pro/";
-    //$vm.hosting_path    ="https://windfarm.rt.org.au"
-    $vm.hosting_path    =window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
-    $vm.common          ="https://windfarm.rt.org.au";
-    $vm.debug_message	=true;
-    $vm.reload          ='';
-    //--------------------------------------------------------
     if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
-        //$vm.hosting_path    =window.location.protocol+'//'+window.location.host;
+        $vm.hosting_path    =window.location.protocol+'//'+window.location.host;
         $vm.common          =window.location.protocol+'//'+window.location.host;
-        $vm.debug		    =false;
-        //$vm.repository      ="woolcock-imr/windfarm";
+        $vm.debug		    =true;
+    }
+    else{
+        //$vm.hosting_path    ="https://cbs.wappsystem.com/dev/github"
+        //$vm.common          ="https://cbs.wappsystem.com/dev/github";
+		$vm.hosting_path    ="https://windfarm.rt.org.au"
+        $vm.common          ="https://windfarm.rt.org.au";
     }
     //--------------------------------------------------------
+    $vm.server		    ="development";
+    $vm.repository      ="";
+    $VmAPI.api_base	    ="https://cbs.wappsystem.com/dev/";
+    //--------------------------------------------------------
+    $vm.debug_message	  =true;
+    //--------------------------------------------------------
 	var start=function(){
-		//var url=$vm.url('__BASE__/'+$vm.repository+'/version.html?_=')+new Date().getTime();
-		//if($vm.debug_message===true) console.log('load module from '+url);
-        //$.get(url,function(new_ver){ $vm.version=new_ver.trim(); load_vmapi();},'text')
-        $vm.version=$vm.ver[0]; load_vmapi();
+		var url=$vm.url('__BASE__/'+$vm.repository+'/version.html?_=')+new Date().getTime();
+		if($vm.debug_message===true) console.log('load module from '+url);
+        $.get(url,function(new_ver){ $vm.version=new_ver.trim(); load_vmapi();},'text')
 	}
 	//--------------------------------------------------------
-    var load_vmapi   =function(){ load_js($vm.url('https://api.vmiis.com/distribution/vmapi.min.js'),load_vm);	}
-    var load_vm      =function(){ load_js($vm.url('https://framework.vmiis.com/distribution/vmframework.min.js'),init);}
+    var load_vmapi   =function(){ load_js($vm.url('https://vmiis.github.io/api/distribution/vmapi.min.js'),load_vm);	}
+    var load_vm      =function(){ load_js($vm.url('https://vmiis.github.io/framework/distribution/vmframework.min.js'),init);}
     var init         =function(){ $vm.init({callback:function(){$vm.load_first_module({url:$vm.hosting_path+'/'+$vm.repository+'/modules/frame/layout.html'}); last();  }});	}
 	//--------------------------------------------------------
 	var load_js=function(url,next){
@@ -49,22 +50,13 @@ $(document).ready(function(){
 	}
 	//--------------------------------------------------------
 	$vm.url=function(text){
-        text=text.replace(/__HOST__\//g,$vm.hosting_path+'/');
+        var re1=new RegExp('__BASE__/'+$vm.repository, 'g');             text=text.replace(re1,$vm.hosting_path+'/'+$vm.repository);
         var re2=new RegExp('__BASE__', 'g'); 	                         text=text.replace(re2,$vm.common);
         var re3=new RegExp('__VER__', 'g'); 	                         text=text.replace(re3,$vm.version);
         var re4=new RegExp('/master/', 'g');	                         text=text.replace(re4,'/');
         var re5=new RegExp('/blob/', 'g');		                         text=text.replace(re5,'/blob/master/');
-
-		//text=text.replace(/windfarm.rt.org.au\/vmiis\/Common-Code/g,'vmiis.github.io\/component');
-        text=text.replace(/windfarm.rt.org.au\/vmiis\/Common-Code/g,'component.vmiis.com');
-
-        if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
-        }
-        else{
-            text=text.replace(/__BASE__\/woolcock-imr\/woolcock_images/g,$vm.hosting_path+'/images');
-            text=text.replace(/woolcock-imr\/windfarm\//g,'');
-        }
-        text=text.replace(/__COMPONENT__\//g,'https://component.vmiis.com/');
+		text=text.replace(/woolcock-imr\/windfarm\//g,'');
+		text=text.replace(/windfarm.rt.org.au\/vmiis\/Common-Code/g,'vmiis.github.io\/component');
 		return text;
 	}
 	//--------------------------------------------------------

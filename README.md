@@ -1,3 +1,3 @@
 # windfarm - clinical trials
 
-https://windfarm.rt.org.au/  
+https://woolcock-imr.github.io/windfarm/index.html  

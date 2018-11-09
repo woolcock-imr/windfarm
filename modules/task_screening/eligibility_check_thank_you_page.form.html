@@ -1,5 +1,5 @@
 <section class=w3s>
-    VmInclude:__COMPONENT__/toolbar/back_save.html
+    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save.html
     <div class="w3-container w3-content-2">
         <form id=F__ID >
             <div class="w3-xlarge w3-center w3-padding-16">Thank you for you completing the first section of our online questionnaire</div>
@@ -23,7 +23,7 @@
 function F__ID(){
     //----------------------------------
     VmInclude:__BASE__/woolcock-imr/windfarm/common-code/screening_participant.js
-    VmInclude:__COMPONENT__/grid/form.js
+    VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
     var _task_fields;
     //----------------------------------
     $('#D__ID').on('load',function(){
@@ -116,8 +116,8 @@ function F__ID(){
 }
 </script>
 <style>
-VmInclude:__COMPONENT__/toolbar/toolbar.css
-VmInclude:__COMPONENT__/grid/form.css
+VmInclude:__BASE__/vmiis/Common-Code/toolbar/toolbar.css
+VmInclude:__BASE__/vmiis/Common-Code/grid/form.css
 #tb__ID input[type=radio]{
     cursor:pointer;
 }

@@ -1,12 +1,12 @@
 <section>
-    VmInclude:__COMPONENT__/grid/grid_import.html
+    VmInclude:__BASE__/vmiis/Common-Code/grid/grid_import.html
 </section>
 <script>
     function F__ID(){
         //-------------------------------------
-        VmInclude:__COMPONENT__/grid/grid.js
-        VmInclude:__COMPONENT__/style/ease-in-out.js
-        if($vm.module_list['_system_import_dialog_module']===undefined) $vm.module_list['_system_import_dialog_module']={table_id:'',url:'__COMPONENT__/dialog/import_dialog_module.html'};
+        VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
+        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        if($vm.module_list['_system_import_dialog_module']===undefined) $vm.module_list['_system_import_dialog_module']={table_id:'',url:'__BASE__/vmiis/Common-Code/dialog/import_dialog_module.html'};
         $vm.load_module_by_name('_system_import_dialog_module','',{})
         //-------------------------------------
         _fields="_Form,RN,Week_1,Week_2,Week_3,S3,NT,Participant,Participant_uid";
@@ -142,5 +142,5 @@
     }
 </script>
 <style>
-    VmInclude:__COMPONENT__/grid/grid.css
+    VmInclude:__BASE__/vmiis/Common-Code/grid/grid.css
 </style>

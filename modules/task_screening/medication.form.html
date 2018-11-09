@@ -1,5 +1,5 @@
 <section>
-    VmInclude:__COMPONENT__/toolbar/back_save.html
+    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save.html
 	<form id=F__ID>
         <table id=tb__ID style='width:800px;'>
             <colgroup>
@@ -45,7 +45,7 @@
              <tr ><td class=cb_td__ID><input data-custom=1 data-id=past6_tramadol name=past6_tramadol id=past6_tramadol type=checkbox class=modified_checkbox__ID  /></td><td class=cb_td__ID><input data-custom=1 data-id=curr_tramadol name=curr_tramadol id=curr_tramadol type=checkbox class=modified_checkbox__ID  /></td><td>Tramadol (e.g. Lodam, Tramal, Zydol)</td></tr>
                  <tr><td colspan=3  class='subheader__ID'><br>Cold and Flu medications</td></tr>
              <tr ><td class=cb_td__ID ><b>Taken in the past 6 months</b></td><td class=cb_td__ID><b>Currently taken</b></td><td><b>Name</b></td></tr>
-             <tr ><td class=cb_td__ID><input data-custom=1 data-id=past6_antihistamine name=past6_antihistamine id=past6_antihistamine type=checkbox class=modified_checkbox__ID  /></td><td class=cb_td__ID><input data-custom=1 data-id=curr_antihistaminee name=curr_antihistaminee id=curr_antihistaminee type=checkbox class=modified_checkbox__ID  /></td><td>Antihistamine</td></tr>
+             <tr ><td class=cb_td__ID><input data-custom=1 data-id=past6_antihistamine name=past6_antihistamine id=past6_antihistamine type=checkbox class=modified_checkbox__ID  /></td><td class=cb_td__ID><input data-custom=1 data-id=curr_antihistamine name=curr_antihistamine id=curr_antihistamine type=checkbox class=modified_checkbox__ID  /></td><td>Antihistamine</td></tr>
              <tr ><td class=cb_td__ID><input data-custom=1 data-id=past6_pseudoephedrine name=past6_pseudoephedrine id=past6_pseudoephedrine type=checkbox class=modified_checkbox__ID  /></td><td class=cb_td__ID><input data-custom=1 data-id=curr_pseudoephedrine name=curr_pseudoephedrine id=curr_pseudoephedrine type=checkbox class=modified_checkbox__ID  /></td><td>Pseudoephedrine (e.g. Benadryl, Chemists’ Own Cold & Flu, Codral, Demazin, Sudafed Sinus)</td></tr>
              <tr><td colspan=3  class='subheader__ID'><br>Anti-inflammatory medication</td></tr>
              <tr ><td class=cb_td__ID><input data-custom=1 data-id=past6_betamethasone name=past6_betamethasone id=past6_betamethasone type=checkbox class=modified_checkbox__ID  /></td><td class=cb_td__ID><input data-custom=1 data-id=curr_betamethasone name=curr_betamethasone id=curr_betamethasone type=checkbox class=modified_checkbox__ID  /></td><td>Betamethasone (e.g. Antroquoril)</td></tr>
@@ -210,9 +210,9 @@
 <script>
     function F__ID(){
         //----------------------------------
-        VmInclude:__COMPONENT__/grid/form.js
+        VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
         VmInclude:__BASE__/woolcock-imr/windfarm/common-code/screening_participant.js
-        VmInclude:__COMPONENT__/style/ease-in-out.js
+        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
         //----------------------------------
         $('#D__ID').on('load',function(){
             _init();
@@ -249,7 +249,7 @@
                     case 'curr_paracetamol':
                     case 'curr_paracetamol_co':
                     case 'curr_tramadol':
-                    case 'curr_antihistaminee':
+                    case 'curr_antihistamine':
                     case 'curr_pseudoephedrine':
                     case 'curr_betamethasone':
                     case 'curr_celecoxib':
@@ -278,8 +278,8 @@
                     case 'curr_mirtazapine':
                     case 'curr_paroxetine':
                     case 'curr_sertraline':
-                    case 'curr_venlafaxine ':
-                    case 'curr_dexamphetamine ':
+                    case 'curr_venlafaxine':
+                    case 'curr_dexamphetamine':
                     case 'curr_methylpenidate':
                     case 'curr_modafinil':
                     case 'curr_phentermine':
@@ -312,7 +312,7 @@
                     case 'curr_rosuvastatin':
                     case 'curr_simvastatin':
                     case 'curr_simv_eze':
-                    case 'curr_aclidinium ':
+                    case 'curr_aclidinium':
                     case 'curr_budesonide':
                     case 'curr_bud_eform':
                     case 'curr_ciclesonide':
@@ -332,7 +332,7 @@
                     case 'curr_bromocriptine':
                     case 'curr_cabergoline':
                     case 'curr_gabapentin':
-                    case 'curr_hyoscyamine ':
+                    case 'curr_hyoscyamine':
                     case 'curr_levodopa':
                     case 'curr_phenytoin':
                     case 'curr_pramipexole':
@@ -366,13 +366,13 @@
                     case 'curr_met_gliben':
                     case 'curr_pioglitazone':
                     case 'curr_rosiglitazone':
-                    case 'curr_cyp_ethin ':
+                    case 'curr_cyp_ethin':
                     case 'curr_drosp_ethin':
-                    case 'curr_levon_ethin ':
-                    case 'curr_topical_steroids ':
+                    case 'curr_levon_ethin':
+                    case 'curr_topical_steroids':
                     case 'curr_other_hormonal_contraception':
-                    case 'curr_sex_steroids ':
-                    case 'curr_herbal_remedies ':
+                    case 'curr_sex_steroids':
+                    case 'curr_herbal_remedies':
                     case 'past6_aspirin':
                     case 'past6_fentanyl':
                     case 'past6_hydromorphone':
@@ -412,8 +412,8 @@
                     case 'past6_mirtazapine':
                     case 'past6_paroxetine':
                     case 'past6_sertraline':
-                    case 'past6_venlafaxine ':
-                    case 'past6_dexamphetamine ':
+                    case 'past6_venlafaxine':
+                    case 'past6_dexamphetamine':
                     case 'past6_methylpenidate':
                     case 'past6_modafinil':
                     case 'past6_phentermine':
@@ -446,7 +446,7 @@
                     case 'past6_rosuvastatin':
                     case 'past6_simvastatin':
                     case 'past6_simv_eze':
-                    case 'past6_aclidinium ':
+                    case 'past6_aclidinium':
                     case 'past6_budesonide':
                     case 'past6_bud_eform':
                     case 'past6_ciclesonide':
@@ -466,7 +466,7 @@
                     case 'past6_bromocriptine':
                     case 'past6_cabergoline':
                     case 'past6_gabapentin':
-                    case 'past6_hyoscyamine ':
+                    case 'past6_hyoscyamine':
                     case 'past6_levodopa':
                     case 'past6_phenytoin':
                     case 'past6_pramipexole':
@@ -500,13 +500,13 @@
                     case 'past6_met_gliben':
                     case 'past6_pioglitazone':
                     case 'past6_rosiglitazone':
-                    case 'past6_cyp_ethin ':
+                    case 'past6_cyp_ethin':
                     case 'past6_drosp_ethin':
-                    case 'past6_levon_ethin ':
-                    case 'past6_topical_steroids ':
+                    case 'past6_levon_ethin':
+                    case 'past6_topical_steroids':
                     case 'past6_other_hormonal_contraception':
-                    case 'past6_sex_steroids ':
-                    case 'past6_herbal_remedies ':
+                    case 'past6_sex_steroids':
+                    case 'past6_herbal_remedies':
                         if(_records[I][field]=="1" || _records[I][field]=="True" || _records[I][field]=="on" ) $(this).prop('checked', true);
                         $(this).on('click', function(){
                             if($(this).prop("checked") == true)   _set_value("1",_records,I,field);
@@ -534,8 +534,8 @@
     }
 </script>
 <style>
-    VmInclude:__COMPONENT__/toolbar/toolbar.css
-    VmInclude:__COMPONENT__/grid/form.css
+    VmInclude:__BASE__/vmiis/Common-Code/toolbar/toolbar.css
+    VmInclude:__BASE__/vmiis/Common-Code/grid/form.css
     #tb__ID tr td:nth-child(2)
     {
         text-align: center;

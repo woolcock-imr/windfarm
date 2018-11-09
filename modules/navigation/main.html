@@ -21,8 +21,8 @@
         L.woolcock_windfarm_main_screening      ={table_id:'',url:B+'/modules/navigation/screening.html'};
         //---------------------------------------------
         var content_slot=$vm.root_layout_content_slot;
-        VmInclude:__COMPONENT__/navigation/navigation.js
-        VmInclude:__COMPONENT__/style/ease-in-out.js
+        VmInclude:__BASE__/vmiis/Common-Code/navigation/navigation.js
+        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
         //---------------------------------------------
         $('#D__ID').on('load',function(){
             _nav_name='Wind Farm';
@@ -33,8 +33,8 @@
     }
 </script>
 <style>
-    VmInclude:__COMPONENT__/navigation/navigation.css
+    VmInclude:__BASE__/vmiis/Common-Code/navigation/navigation.css
     #D__ID{
-        background: url("__HOST__/images//texture.png");
+        background: url("__BASE__/vmiis/common-code/image/texture.png");
     }
 </style>
