@@ -1,14 +1,14 @@
 <section>
-      VmInclude:__BASE__/vmiis/Common-Code/toolbar/month.html
-      VmInclude:__BASE__/vmiis/Common-Code/calendar/month.html
+      VmInclude:__COMPONENT__/toolbar/month.html
+      VmInclude:__COMPONENT__/calendar/month.html
 </section>
 <script>
     function F__ID(){
         //--------------------------------------------------------
         var _op,_module=$vm.module_list[$vm.vm['__ID'].name];
-        VmInclude:__BASE__/vmiis/Common-Code/toolbar/month_v2.js
-        VmInclude:__BASE__/vmiis/Common-Code/calendar/month_v2.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/toolbar/month_v2.js
+        VmInclude:__COMPONENT__/calendar/month_v2.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //--------------------------------------------------------
         var record_name=_module.var.booking_record_module;
         var daily_name=_module.var.booking_daily_module;

@@ -1,5 +1,5 @@
 <section style='display:none'>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save_print.html
+    VmInclude:__COMPONENT__/toolbar/back_save_print.html
     <div id=pvdiv__ID>
         <form id=F__ID>
             <table id=tb__ID style='width:500px;'>
@@ -39,9 +39,9 @@
 <script>
     function F__ID(){
         //----------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
+        VmInclude:__COMPONENT__/grid/form.js
         VmInclude:__BASE__/woolcock-imr/windfarm/common-code/participant.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //----------------------------------
         $('#D__ID').on('load',function(){
             _init();
@@ -118,6 +118,6 @@
     };
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/style/default.css
-    VmInclude:__BASE__/vmiis/Common-Code/style/form.css
+    VmInclude:__COMPONENT__/style/default.css
+    VmInclude:__COMPONENT__/style/form.css
 </style>

@@ -1,5 +1,5 @@
 <section>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save.html
+    VmInclude:__COMPONENT__/toolbar/back_save.html
 	<form id=F__ID>
         <table id=tb1__ID style='width:800px;'>
             <colgroup>
@@ -187,9 +187,9 @@
 <script>
     function F__ID(){
         //----------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
+        VmInclude:__COMPONENT__/grid/form.js
         VmInclude:__BASE__/woolcock-imr/windfarm/common-code/screening_participant.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //----------------------------------
         $('#D__ID').on('load',function(){
             _init();
@@ -294,7 +294,7 @@
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
     #tb1__ID,#tb2__ID {width:100%;font-size:9pt; font-family:Verdana; margin:0px; border: 3px #B8BDBF solid; border-spacing:0; border-collapse: collapse; table-layout: automatic;}
     #tb1__ID td,#tb2__ID td { border: 0px #B8BDBF solid; color: #333333; border-collapse: collapse; text-align: left; padding: 1px;padding-right:4px; vertical-align:top;}
     #tb1__ID td:first-child,#tb2__ID td:first-child{padding:5px;vertical-align:middle;}

@@ -1,4 +1,4 @@
-VmInclude:__BASE__/vmiis/common-code/toolbar/back.html
+VmInclude:__COMPONENT__/toolbar/back.html
 <section>
     <div id=qe_ID style='padding:50px'>
         <ui id=items__ID>
@@ -17,8 +17,8 @@ VmInclude:__BASE__/vmiis/common-code/toolbar/back.html
         }
         _module_list();
         //---------------------------------------------
-        VmInclude:__BASE__/vmiis/common-code/toolbar/back.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/toolbar/back.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //---------------------------------
         $('#D__ID').on('load',function(){ get_data(); })
         $('#D__ID').on('refresh_back',function(){ get_data();  })

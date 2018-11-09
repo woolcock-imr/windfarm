@@ -1,5 +1,5 @@
 <section>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save.html
+    VmInclude:__COMPONENT__/toolbar/back_save.html
 	<form id=F__ID>
         <table id=tb__ID style='width:800px;'>
             <colgroup>
@@ -71,9 +71,9 @@
 <script>
     function F__ID(){
         //----------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
+        VmInclude:__COMPONENT__/grid/form.js
         VmInclude:__BASE__/woolcock-imr/windfarm/common-code/screening_participant.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //----------------------------------
         $('#D__ID').on('load',function(){
             _init();
@@ -146,8 +146,8 @@
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/toolbar.css
-    VmInclude:__BASE__/vmiis/Common-Code/grid/form.css
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
     #tb__ID td{vertical-align: middle!important;}
     #tb__ID tr td:nth-child(2)
     #tb__ID tr td:nth-child(3),

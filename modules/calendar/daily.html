@@ -1,14 +1,14 @@
 <section>
-      VmInclude:__BASE__/vmiis/Common-Code/toolbar/day.html
-      VmInclude:__BASE__/vmiis/Common-Code/calendar/day.html
+      VmInclude:__COMPONENT__/toolbar/day.html
+      VmInclude:__COMPONENT__/calendar/day.html
       <span style='font-size:60%'>Click the "Time" to start a booking.</span>
 </section>
 <script>
     function F__ID(){
         //--------------------------------------------------------
         var _op,_module=$vm.module_list[$vm.vm['__ID'].name];
-        VmInclude:__BASE__/vmiis/Common-Code/toolbar/day_v2.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/toolbar/day_v2.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //--------------------------------------------------------
         var record_name=_module.var.booking_record_module;
         var booking_record_db_pid=$vm.module_list[record_name].table_id;

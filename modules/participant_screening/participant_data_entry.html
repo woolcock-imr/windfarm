@@ -15,8 +15,8 @@
         //$vm.module_list.data_entry_module_list={table_id:'',url:$vm.hosting_path+'/woolcock-imr/windfarm/modules/navigation/screening_participant_task_module_list.html'};
         //---------------------------------
         var _op,_module=$vm.module_list[$vm.vm['__ID'].name];
-        VmInclude:__BASE__/vmiis/Common-Code/toolbar/back.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/toolbar/back.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //---------------------------------
         $('#D__ID').on('load',function(){ _op=$vm.vm['__ID'].op; get_data(); })
         $('#D__ID').on('refresh_back',function(){ get_data(); })
@@ -91,7 +91,7 @@
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/style/default.css
+    VmInclude:__COMPONENT__/style/default.css
     #D__ID{
       font-size:10pt;
       font-family: Verdana,Helvetica,Arial,sans-serif;

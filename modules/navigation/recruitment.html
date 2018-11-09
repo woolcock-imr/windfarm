@@ -40,8 +40,8 @@
         L.woolcock_windfarm_registration_thanks=     {table_id:'--------',var:v,url:B+'/modules/registration/registration_thanks.html'};
         //---------------------------------------------
         var content_slot=$vm.root_layout_content_slot;
-        VmInclude:__BASE__/vmiis/Common-Code/navigation/navigation.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/navigation/navigation.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //---------------------------------------------
         $('#D__ID').on('load',function(){
             _nav_name='Recruitment';
@@ -52,7 +52,7 @@
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/navigation/navigation.css
+    VmInclude:__COMPONENT__/navigation/navigation.css
     #D__ID{
         background: url("__HOST__/images//texture.png");
     }

@@ -1,5 +1,5 @@
 <section>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/back_save.html
+    VmInclude:__COMPONENT__/toolbar/back_save.html
     <form id=F__ID>
         <table id=tb__ID style='width:900px;'>
              <colgroup><col class=colA style='width:260px' /><col /></colgroup>
@@ -46,7 +46,7 @@
 <script>
     function F__ID(){
         //-------------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/form.js
+        VmInclude:__COMPONENT__/grid/form.js
         //----------------------------------
         $('#D__ID').on('load',function(){
             _init();
@@ -85,8 +85,8 @@
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/toolbar/toolbar.css
-    VmInclude:__BASE__/vmiis/Common-Code/grid/form.css
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
     VmInclude:__BASE__/woolcock-imr/windfarm/assets/w3.css
     .ui-datepicker{ z-index: 9999 !important;}
     .inputbox__ID{width:50px;}

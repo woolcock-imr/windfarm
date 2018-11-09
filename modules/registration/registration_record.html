@@ -1,11 +1,11 @@
 <section>
-    VmInclude:__BASE__/vmiis/Common-Code/grid/grid.html
+    VmInclude:__COMPONENT__/grid/grid.html
 </section>
 <script>
     function F__ID(){
         //-------------------------------------
-        VmInclude:__BASE__/vmiis/Common-Code/grid/grid.js
-        VmInclude:__BASE__/vmiis/Common-Code/style/ease-in-out.js
+        VmInclude:__COMPONENT__/grid/grid.js
+        VmInclude:__COMPONENT__/style/ease-in-out.js
         //-------------------------------------
         //_fields="_Form|form_module,Screening_Number,Clinical Screening Number|Screening_ID,Screening_Participant_ID|spUID,First_Name,Last_Name,Phone_Number,Email,Postcode,Location,Study_find,Study_find_other";
         //_fields+=",Submit Date|DateTime,Submitted by|Author,_Delete";
@@ -33,7 +33,7 @@
                     //td.html(records[I].UID);
                     break;
                 case 'Baseline_study_date':
-                    VmInclude:__BASE__/vmiis/Common-Code/grid/field_date.js
+                    VmInclude:__COMPONENT__/grid/field_date.js
                     break;
                 case 'Study_find':
                     var html="<select style='border:0;''>\
@@ -57,7 +57,7 @@
                         <option value='18' >Other</option>\
                     </select>\
                     ";
-                    VmInclude:__BASE__/vmiis/Common-Code/grid/field_select.js
+                    VmInclude:__COMPONENT__/grid/field_select.js
                 break;
                 case 'Consent_approached_research':
                 case 'Eligible':
@@ -68,7 +68,7 @@
                     html+="<option value='Yes'>Yes</option>";
                     html+="<option value='No'>No</option>";
                     html+="</select>";
-                    VmInclude:__BASE__/vmiis/Common-Code/grid/field_select.js
+                    VmInclude:__COMPONENT__/grid/field_select.js
                 break;
             }
         }
@@ -131,5 +131,5 @@ alert("DONE");
     }
 </script>
 <style>
-    VmInclude:__BASE__/vmiis/Common-Code/grid/grid.css
+    VmInclude:__COMPONENT__/grid/grid.css
 </style>
