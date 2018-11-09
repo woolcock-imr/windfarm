@@ -48,6 +48,7 @@ $(document).ready(function(){
 	}
 	//--------------------------------------------------------
 	$vm.url=function(text){
+        text=text.replace(/__HOST__\//g,$vm.hosting_path+'/');
         var re2=new RegExp('__BASE__', 'g'); 	                         text=text.replace(re2,$vm.common);
         var re3=new RegExp('__VER__', 'g'); 	                         text=text.replace(re3,$vm.version);
         var re4=new RegExp('/master/', 'g');	                         text=text.replace(re4,'/');
@@ -59,6 +60,7 @@ $(document).ready(function(){
         if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
         }
         else{
+            text=text.replace(/__BASE__\/woolcock-imr\/woolcock_images/g,$vm.hosting_path+'/images');
             text=text.replace(/woolcock-imr\/windfarm\//g,'');
         }
 		return text;
